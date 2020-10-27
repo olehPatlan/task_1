@@ -17,6 +17,11 @@ public class TestTask1 {
     }
 
     @Test
+    public void testPercentageWorkedTime() {
+        assertEquals(10, manager.percentageWorkedTime(), 0.0);
+    }
+
+    @Test
     public void testManagerCalculateSalary() {
         assertEquals(200, manager.calculateSalary(), 0);
         manager.setWorkedHours(200);
