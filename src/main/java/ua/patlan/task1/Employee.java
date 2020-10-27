@@ -31,7 +31,10 @@ public abstract class Employee {
         return getWorkedHours() / STANDARD_WORKED_HOURS_PER_MONTH * hundredPercent;
     }
 
-    public abstract double calculateSalary();
+    public double calculateSalary(){
+        int hundredPercent = 100;
+        return getDefaultSalary() * percentageWorkedTime() / hundredPercent;
+    }
 
     public String getName() {
         return name;

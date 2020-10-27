@@ -9,9 +9,4 @@ public class Programmer extends Employee {
     public Programmer(long id, String name, String surname, double defaultSalary, double workedHours) {
         super(id, name, surname, defaultSalary, workedHours);
     }
-
-    public double calculateSalary() {
-        int hundredPercent = 100;
-        return getDefaultSalary() * percentageWorkedTime() / hundredPercent;
-    }
 }
