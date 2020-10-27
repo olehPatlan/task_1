@@ -26,7 +26,10 @@ public abstract class Employee {
         this.workedHours = workedHours;
     }
 
-    public abstract double percentageWorkedTime();
+    public double percentageWorkedTime() {
+        int hundredPercent = 100;
+        return getWorkedHours() / STANDARD_WORKED_HOURS_PER_MONTH * hundredPercent;
+    }
 
     public abstract double calculateSalary();
 

@@ -10,11 +10,6 @@ public class Manager extends Employee {
         super(id, name, surname, defaultSalary, workedHours);
     }
 
-    public double percentageWorkedTime() {
-        int hundredPercent = 100;
-        return getWorkedHours() / STANDARD_WORKED_HOURS_PER_MONTH * hundredPercent;
-    }
-
     public double calculateSalary() {
         int hundredPercent = 100;
         double pwt = percentageWorkedTime();
