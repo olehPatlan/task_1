@@ -13,7 +13,7 @@ public class TestTask1 {
     @Before
     public void setUp() {
         manager = new Manager(1, "Tom", "surname", 2000, 16);
-        programmer = new Programmer(1, "Bob", "surname", 2000, 16);
+        programmer = new Programmer(2, "Bob", "surname", 2000, 16);
     }
 
     @Test
@@ -28,5 +28,12 @@ public class TestTask1 {
         assertEquals(2000, manager.calculateSalary(), 0);
         programmer.setWorkedHours(320);
         assertEquals(4000, programmer.calculateSalary(), 0);
+    }
+
+    @Test
+    public void testEquals() {
+        assertEquals(manager, new Manager(1));
+        assertNotEquals(manager, new Programmer(1));
+        assertNotEquals(programmer, new Programmer(3));
     }
 }
