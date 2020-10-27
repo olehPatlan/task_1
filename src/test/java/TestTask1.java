@@ -22,15 +22,10 @@ public class TestTask1 {
     }
 
     @Test
-    public void testManagerCalculateSalary() {
+    public void testCalculateSalary() {
         assertEquals(200, manager.calculateSalary(), 0);
         manager.setWorkedHours(200);
         assertEquals(2000, manager.calculateSalary(), 0);
-    }
-
-    @Test
-    public void testProgrammerCalculateSalary() {
-        assertEquals(200, programmer.calculateSalary(), 0);
         programmer.setWorkedHours(320);
         assertEquals(4000, programmer.calculateSalary(), 0);
     }
