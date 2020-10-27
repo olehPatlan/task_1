@@ -16,6 +16,8 @@ public abstract class Employee {
 
     protected static final int STANDARD_WORKED_HOURS_PER_MONTH = 160;
 
+    protected static final int HUNDRED_PERCENT=100;
+
     public Employee(long id) {
         this.id = id;
     }
@@ -29,13 +31,11 @@ public abstract class Employee {
     }
 
     public double percentageWorkedTime() {
-        int hundredPercent = 100;
-        return getWorkedHours() / STANDARD_WORKED_HOURS_PER_MONTH * hundredPercent;
+        return getWorkedHours() / STANDARD_WORKED_HOURS_PER_MONTH * HUNDRED_PERCENT;
     }
 
     public double calculateSalary() {
-        int hundredPercent = 100;
-        return getDefaultSalary() * percentageWorkedTime() / hundredPercent;
+        return getDefaultSalary() * percentageWorkedTime() / HUNDRED_PERCENT;
     }
 
     public String getName() {

@@ -11,8 +11,7 @@ public class Manager extends Employee {
     }
 
     public double calculateSalary() {
-        int hundredPercent = 100;
-        if (percentageWorkedTime() >= hundredPercent)
+        if (percentageWorkedTime() >= HUNDRED_PERCENT)
             return getDefaultSalary();
         return super.calculateSalary();
     }
