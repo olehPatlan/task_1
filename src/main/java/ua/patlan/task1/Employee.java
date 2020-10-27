@@ -12,7 +12,7 @@ public abstract class Employee {
 
     private double workedHours;
 
-    private static final int STANDARD_WORKED_HOURS_PER_MONTH = 160;
+    protected static final int STANDARD_WORKED_HOURS_PER_MONTH = 160;
 
     public Employee(long id) {
         this.id = id;
