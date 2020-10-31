@@ -59,6 +59,9 @@ public abstract class Employee {
     }
 
     public void setDefaultSalary(double defaultSalary) {
+        if (defaultSalary<0){
+            throw new IllegalArgumentException("salary cannot be negative");
+        }
         this.defaultSalary = defaultSalary;
     }
 
@@ -67,6 +70,9 @@ public abstract class Employee {
     }
 
     public void setWorkedHours(double workedHours) {
+        if (workedHours<0){
+            throw new IllegalArgumentException("workedHours cannot be negative");
+        }
         this.workedHours = workedHours;
     }
 
